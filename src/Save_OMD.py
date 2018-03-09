@@ -3,7 +3,6 @@ from docx import Document
 import os
 import comtypes.client
 
-# hallo
 # path
 def save_omd_as_docx(company_name):
     document = Document(r"C:\Users\M261651\Desktop\Dokumente\Files für Pycharm Projekte\OMD Prozess\OMDLetter\OMD Vorlage\TCUST_standard_disclosure_letter_company_and_items_filled.docx")
@@ -64,5 +63,4 @@ def generate_docx_name(company_name, country, omd, todays_date, docx):
 
 
 
-
-
+# Hallo wie geht es dir?
