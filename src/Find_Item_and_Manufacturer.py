@@ -37,10 +37,11 @@ def formatting_item_number(item):
 # https://stackoverflow.com/questions/14944623/python-xrld-read-rows-and-columns
 # übergabe: item + description
 # return item + description + manufacturer
+# path
 def get_rows_and_columns_of_omd_excel(this_item, this_description):
     item = this_item
     description = this_description
-    workbook = xlrd.open_workbook('ExcelFile\Original manufacturer for Disclosures_OMD3.xlsx')
+    workbook = xlrd.open_workbook(r"C:\Users\M261651\Desktop\Dokumente\Files für Pycharm Projekte\OMD Prozess\ExcelFile\Original manufacturer for Disclosures_OMD3.xlsx")
     worksheet = workbook.sheet_by_name('OMT-Articles')
     num_rows = worksheet.nrows - 1
     num_cells = worksheet.ncols - 1

@@ -21,8 +21,9 @@ def read_rfi_data(file_name):
 
 
 # if email in rfi is hyperlink, then take index[74]
+# path
 def get_requester_email(name):
-    path = "RFIs\\"
+    path = "C:\\Users\M261651\Desktop\Dokumente\Files für Pycharm Projekte\OMD Prozess\RFIs\\"
     file_name = name
     path_and_file_name = path + file_name
     my_text = docx2txt.process(path_and_file_name)
@@ -46,8 +47,9 @@ def get_requester(path_and_file_name, email, email_address):
     return requester
 
 
+# path
 def get_items(name):
-    path = "RFIs\\"
+    path = "C:\\Users\M261651\Desktop\Dokumente\Files für Pycharm Projekte\OMD Prozess\RFIs\\"
     file_name = name
     path_and_file_name = path + file_name
     document = Document(path_and_file_name)

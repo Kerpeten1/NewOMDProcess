@@ -2,20 +2,22 @@ from docx import Document
 import collections
 
 
+# path
 def fill_in_requester_data(re):
     requester_data = [re[0][1], re[1][1], re[2][1], re[3][1], re[4][1]]
     if "@" in re[5][1]:
         requester_data.append(re[5][1])
 
-    document = Document("OMDLetter\OMD Vorlage\TCUST_standard_disclosure_letter.docx")
+    document = Document(r"C:\Users\M261651\Desktop\Dokumente\Files für Pycharm Projekte\OMD Prozess\OMDLetter\OMD Vorlage\TCUST_standard_disclosure_letter.docx")
     document.tables[0].rows[0].cells[0].text = ""
     for element in requester_data:
         document.tables[0].rows[0].cells[0].text = document.tables[0].rows[0].cells[0].text + element + "\n"
-    document.save("OMDLetter\OMD Vorlage\TCUST_standard_disclosure_letter_company_filled.docx")
+    document.save(r"C:\Users\M261651\Desktop\Dokumente\Files für Pycharm Projekte\OMD Prozess\OMDLetter\OMD Vorlage\TCUST_standard_disclosure_letter_company_filled.docx")
 
 
+# path
 def fill_in_item_data(items):
-    document = Document("OMDLetter\OMD Vorlage\TCUST_standard_disclosure_letter_company_filled.docx")
+    document = Document(r"C:\Users\M261651\Desktop\Dokumente\Files für Pycharm Projekte\OMD Prozess\OMDLetter\OMD Vorlage\TCUST_standard_disclosure_letter_company_filled.docx")
     row = 1
     index = 0
     for element in items:
@@ -32,7 +34,7 @@ def fill_in_item_data(items):
                     document.tables[1].rows[row].cells[2].add_paragraph()
             add_table_row(element, items, document)
         row += 1
-    document.save("OMDLetter\OMD Vorlage\TCUST_standard_disclosure_letter_company_and_items_filled.docx")
+    document.save(r"C:\Users\M261651\Desktop\Dokumente\Files für Pycharm Projekte\OMD Prozess\OMDLetter\OMD Vorlage\TCUST_standard_disclosure_letter_company_and_items_filled.docx")
 
 
 def add_table_row(element, items, document):
