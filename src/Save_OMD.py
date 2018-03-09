@@ -63,6 +63,5 @@ def generate_docx_name(company_name, country, omd, todays_date, docx):
 
 
 
-# Hallo wie geht es dir?
-# Was machst du so?
-# Nichts, und du?
+# na du
+# asdsad
